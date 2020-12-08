@@ -2,5 +2,14 @@ sudo: required
 services:
     - docker
 script:
-        - docker build -t ysagron1/node . 
-        - docker images ysagron1/node
+        - docker build -t ysagron/node . 
+        - docker images ysagron/node
+before_deploy: 
+    - docker login -u ysagron -p ys123456
+    
+deploy: 
+    provider: script
+    script: docker push ysagron/node
+
+on:
+    branch: main
