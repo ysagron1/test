@@ -1,0 +1,6 @@
+sudo: required
+services:
+    - docker
+scripts:
+        - docker build ysagron/node . 
+        - docker images ysagron/node
