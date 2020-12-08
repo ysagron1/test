@@ -2,5 +2,5 @@ sudo: required
 services:
     - docker
 scripts:
-        - docker build ysagron/node . 
-        - docker images ysagron/node
+        - docker build ysagron1/node . 
+        - docker images ysagron1/node
